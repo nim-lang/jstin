@@ -99,10 +99,6 @@ template emptyCheck(x: untyped): bool =
   else:
     {.error: "Cannot determine if this type is empty or not!".}
 
-template default[T](t: typedesc[T]): T =
-  var v: T
-  v
-
 {.push inline.}
 
 proc toJson*[T: SomeInteger|char](val: T): JsonNode =
